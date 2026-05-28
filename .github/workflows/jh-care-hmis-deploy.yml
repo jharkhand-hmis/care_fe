@@ -28,7 +28,7 @@ jobs:
             type=raw,value=staging-latest,enable=${{ github.ref == 'refs/heads/staging' }}
             type=raw,value=staging-latest-${{ github.run_number }}-{{date 'YYYYMMDD'}}-{{sha}},enable=${{ github.ref == 'refs/heads/staging' }}
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/develop' }}
-            type=raw,value=latest-${{ github.run_number }},enable=${{ github.ref == 'refs/heads/develop' }}
+            type=raw,value=latest2-${{ github.run_number }},enable=${{ github.ref == 'refs/heads/develop' }}
             type=semver,pattern={{version}}
       
       - name: Set up Docker Buildx
